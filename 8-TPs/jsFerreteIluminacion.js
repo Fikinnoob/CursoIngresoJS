@@ -10,5 +10,66 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+   var lamparas;
+   var precio;    
+   var marca;
+   var impuesto;
+   
+
+   
+     
+     marca = document.getElementById("Marca").value;
+     document.getElementById("precioDescuento").value = precio;
+     lamparas = parseInt(document.getElementById("Cantidad").value);
+     precio = lamparas * 35;
+     impuesto = precio * 10 /100;
+
+
+      if (lamparas >= 7){
+      (document.getElementById("precioDescuento").value = precio *50 /100 + impuesto) + alert("Usted pago " + impuesto + " de IIBB")
+      
+    }else if(lamparas === 6){
+      document.getElementById("precioDescuento").value = precio * 50 /100;
+
+    }else if(lamparas === 5 && marca == "ArgentinaLuz"){
+      document.getElementById("precioDescuento").value = precio - precio * 40 /100
+
+     }else if(lamparas === 5 && marca != "ArgentinaLuz"){
+        document.getElementById("precioDescuento").value = precio - precio * 30 /100
+
+     }else if (lamparas === 4 && marca == "ArgentinaLuz"){
+      document.getElementById("precioDescuento").value = precio - precio * 25 /100
+
+     } else if (lamparas === 4 && marca == "FelipeLamparas"){
+      document.getElementById("precioDescuento").value = precio - precio * 25 /100
+     
+    }else if ( lamparas === 4 && marca != "ArgentinaLuz" && marca != "FelipeLamparas"){
+      document.getElementById("precioDescuento").value = precio - precio * 20 /100
+
+    }else if (lamparas === 3 && marca == "ArgentinaLuz"){
+      document.getElementById("precioDescuento").value = precio - precio * 15 /100
+    
+    }else if (lamparas === 3 && marca == "FelipeLamparas"){
+      document.getElementById("precioDescuento").value = precio - precio * 10 /100
+    
+    }else if ( lamparas === 3 && marca != "ArgentinaLuz" && marca != "FelipeLamparas"){
+      document.getElementById("precioDescuento").value = precio - precio * 5 /100
+
+    }
+    else if (document.getElementById("precioDescuento").value = precio){}
+          
+
+        
+
+        
+    
+    
+          
+        
+        
+        
+        
+
+
+     
 }

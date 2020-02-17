@@ -8,21 +8,50 @@ function Rectangulo ()
 {
 var largo;
 var ancho;
-var radio;
 var resultado;
 
 largo = parseInt(document.getElementById("Largo").value);
 ancho = parseInt(document.getElementById("Ancho").value);
 radio = parseInt(document.getElementById("Radio").value);
 
-resultado = (largo * ancho * 3)
+resultado = (largo *2 + ancho *2) *3;
 alert(resultado);
 }
 function Circulo () 
-{
-	
+{   
+    var dos;
+    var tres;
+    var radio;
+    var resultado;
+    var pi; 
+    var suma;
+    
+    parseInt(dos = 2);
+    parseInt(tres = 3);
+    parseInt(pi = 3.1416);
+    radio = parseInt(document.getElementById("Radio").value);
+    suma = (dos * pi * radio) ;
+    resultado = (suma * tres);
+    alert(resultado);
 }
 function Materiales () 
 {
+var largo;
+var ancho;
+var area;
+var cemento;
+var cal;
+
+
+
+largo = parseInt(document.getElementById("Largo").value);
+ancho = parseInt(document.getElementById("Ancho").value);
+
+area = (largo * ancho);
+
+cemento = area * 2;
+cal = area * 3;
+alert("se necesitan " + cemento + " bolsas de cemento" + " y " + cal + " bolsas de cal");
+
 	
 }
