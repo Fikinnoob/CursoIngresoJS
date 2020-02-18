@@ -5,7 +5,7 @@ function mostrar()
 	var acumulador=0;
 while(contador <5){
 	contador++;
-	acumulador= acumulador + contador;
+	acumulador =+ contador;
 }
 
 

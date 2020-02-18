@@ -7,7 +7,8 @@ var clave = prompt("ingrese el número clave.");
 
  contador++;
 
- if(contador== 3){;
+ if(contador== 1){
+     alert("Error.Numero de Intentos Maximos Alcanzados")
 
  break;
 }
