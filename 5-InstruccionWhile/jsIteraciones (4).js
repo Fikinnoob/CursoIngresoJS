@@ -1,12 +1,18 @@
 function mostrar()
 {
 
-	var numero = prompt("ingrese un número entre 0 y 10.");
-    while(numero >=11 ){
-	 numero = prompt("Ingrese un numero entre 0 y 10.")
+	var numero = prompt("ingrese un número entre 0 y 9.");
+    while(numero >=10 ){
+	 numero = prompt("Ingrese un numero entre 0 y 9.")
+
+	}while(isNaN(numero)){
+		numero = prompt("Error. Ingrese un numero");
+
+		 
 	 
 	 
-	}if(numero <=11){
+	 
+	}if(numero <=10){
 	document.getElementById("Numero").value = numero
 	}
 

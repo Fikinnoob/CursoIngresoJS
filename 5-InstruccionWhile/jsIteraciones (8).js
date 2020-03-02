@@ -10,18 +10,24 @@ function mostrar()
 
     numero = parseInt(numero);
     
-	contador++;
+	
 	 
 	while(isNaN(numero)){
 		numero = prompt("Error.Ingrese un numero");
 		numero = parseInt(numero); 
 
+		contador++;
+
+     if(contador >= 2){
+		 alert("error. capacidad maxima de error");
+		 break;
+		}
 	
 	}
 	
 	if(numero >= 0){
 		 positivo = positivo + numero;
-	}else{
+	}else if(numero <0){
      negativo *= numero;
 	
  }

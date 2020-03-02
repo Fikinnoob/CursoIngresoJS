@@ -1,26 +1,27 @@
 function mostrar()
 {
 
-	var contador=0;
 	// declarar variables
-	
-	var respuesta='si';
+	var contador=0;
+	var respuesta="si";
     var maximo;
 	var minimo;
-	var primeraVez = true;
+	var primeravez = true;
 
-	while(respuesta!='no')
+	while(confirm("desea ingresar un numero"))
 
 	{ var numero = prompt("Ingrese un numero");
 	      numero = parseInt(numero);
 
 		while(isNaN(numero)){
 		numero = prompt("Error.Ingrese un numero");
-		numero = parseInt(numero); }
+		numero = parseInt(numero); 
+	   contador++;
+	}
 
 			  //Bandera primeraVez 
-		  }if(primeraVez){
-			  primeraVez = false;
+		if(primeravez){
+			  primeravez = false;
 
 			  maximo =numero;
 			  minimo= numero;
@@ -31,17 +32,17 @@ function mostrar()
 		  }else if(numero < minimo){
 			  minimo = numero;
 
-             respuesta = confirm("Desea continuar?");
+            
 		  }
-		
+		  document.getElementById("maximo").value = maximo;
+           document.getElementById("minimo").value = minimo;
+		}
+		}
 
-document.getElementById("maximo").value = maximo;
-document.getElementById("minimo").value = minimo;
- 
 	
 	
 
 
 
 
-}//FIN DE LA FUNCIÓN
+//FIN DE LA FUNCIÓN
