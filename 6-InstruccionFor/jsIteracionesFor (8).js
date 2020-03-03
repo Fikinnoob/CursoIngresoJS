@@ -4,18 +4,24 @@ function mostrar()
 
     numero = parseInt(prompt("Ingrese un numero."));
 
-    for(var i=0; i <=numero ;i++){
+    for(var i=2; i <=numero ;i++){
      
-        if(numero /numero != 1 && numero /1 !=numero){
+        if(numero % i ==0 && numero !=2){
 
             alert("el numero ingresado no es primo");
             break;
-        }else
+        }if(numero % i ==1 || numero ==3)
         alert("el numero ingresado es primo");
         break;
 
     }
+if(numero <=1){
+    alert("el numero ingresado no es primo");
+}
+if(numero==2){
+    alert("el numero ingresado es primo");
 
+}
 }
 
 
