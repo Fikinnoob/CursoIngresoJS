@@ -52,14 +52,14 @@ function mostrar()
 
 
 	}
-	document.write("numeros positivos " ,"= " +  contadorpositivo);
-	document.write("numeros negativos " ,"= " +  contadornegativo);
-	document.write("numeros par  " ,"= " +  contadorpar);
-	document.write("ceros " ,"= " +  contadorcero);
-	document.write("suma de positivos " ,"= "  +  positivos);
-	document.write("suma de negativos " ,"= "  +  negativos);
-	document.write("promedio de positivos " ,"= "  +  promediopo);
-	document.write("promedio de negativos " ,"= "  +  promedioneg);
+	document.write("numeros positivos " ,"= " +  contadorpositivo + "</br>");
+	document.write("numeros negativos " ,"= " +  contadornegativo + "</br>");
+	document.write("numeros par  " ,"= " +  contadorpar + "</br>");
+	document.write("ceros " ,"= " +  contadorcero + "</br>");
+	document.write("suma de positivos " ,"= "  +  positivos + "</br>");
+	document.write("suma de negativos " ,"= "  +  negativos + "</br>");
+	document.write("promedio de positivos " ,"= "  +  promediopo + "</br>");
+	document.write("promedio de negativos " ,"= "  +  promedioneg + "</br>");
 	}
 	
 		
