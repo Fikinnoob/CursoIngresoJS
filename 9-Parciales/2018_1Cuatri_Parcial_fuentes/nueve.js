@@ -12,19 +12,17 @@ function mostrar()
  var pesomin;
  var pesomax;
  var promediospeso;
+ var datos ='Ingrese Datos';
 
- while(confirm("Desea ingresar Datos?")){
+ while(confirm(datos)){
+  datos='Desea Ingresar mas datos ?'
   marca = prompt("Ingrese la marca del producto");
   flag++;
-  peso = parseInt(prompt("Ingrese el peso del producto 1 - 100"));
-  promedios++;
-  while(isNaN(peso)){
-       peso = prompt("Error ingrese un peso valido.")
-       peso = parseInt(prompt("Ingrese el peso del producto 1 - 100"));
-       promedios++;
-    } if(peso >100 || peso <1){
-        peso = prompt("Error ingrese un peso valido.")
-    
+  peso = parseInt(prompt("Ingrese el peso del producto 1 a 100"));
+  
+       
+     while(peso >100 || peso <1 ||isNaN(peso)){
+        peso = parseInt(prompt("Error ingrese un peso valido 1 a 100."));
 
        }if(flag == 1 || peso >productopesado){
         productopesado = peso;
@@ -37,18 +35,18 @@ function mostrar()
    }if(flag == 1 ||peso < pesomin ){
        pesomin = peso;
    }
+   promedios++;
    acumuladorpeso = acumuladorpeso + peso;
    promediospeso =  acumuladorpeso / promedios;
 
-   temperatura = parseInt(prompt("Ingrese la temperatura de almacenamiento -30 - 30")); 
 
-   while(isNaN(temperatura)){
-    temperatura = prompt("Error ingrese una temperatura valida.")
-    temperatura = parseInt(prompt("Ingrese la temperatura de almacenamiento -30 - 30"));
-   }
-    if(temperatura <=-31 || temperatura >=31){
-     temperatura = prompt("Error ingrese una temperatura valida.")
+   temperatura = parseInt(prompt("Ingrese la temperatura de almacenamiento -30 a 30")); 
+
+    
+    while(temperatura <=-31 || temperatura >=31 || isNaN(temperatura)){
+        temperatura = parseInt(prompt("Error ingrese una temperatura valida -30 a 30."));
     }
+
       if(temperatura % 2 == 0){
       temperaturaspares++;
 
@@ -56,13 +54,12 @@ function mostrar()
        cerogrados++;
 
    }
- 
+   
+} 
 
-
- }
 document.write("(A): "+ "la cantidad de temperaturas pares son " + temperaturaspares + "</br>")
 document.write("(B): "+ "la marca del producto mas pesado es " + marcapesada + "</br>")
 document.write("(C): "+ "cantidad de productos que se conservan bajo cero son  " + cerogrados + "</br>")
-document.write("(D): "+ "Promedio de peso de todos los productos  " + promediospeso + "</br>")
-document.write("(E): "+ "El peso maximo es  " + pesomax + " El precio minimo es " + pesomin + "</br>")
+document.write("(D): "+ "Promedio de peso de todos los productos  " + promediospeso +" kg" +"</br>")
+document.write("(E): "+ "El peso maximo es  " + pesomax +" kg" + " El precio minimo es " + pesomin +" kg"+  "</br>")
 }
